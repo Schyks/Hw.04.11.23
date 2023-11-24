@@ -1,0 +1,29 @@
+﻿<Window x:Class="Hw._04._11._23.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hw._04._11._23"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="InputText"></TextBox>
+        <Button x:Name="Analyze" Content="Аналіз тексту" Height="50" Width="150" Grid.Row="1"></Button>
+        <ListBox x:Name="Choice" Grid.Row="2" VerticalAlignment="Center" SelectionMode="Multiple">
+            <ListBoxItem IsSelected="True">Кількість речень</ListBoxItem>
+            <ListBoxItem IsSelected="True">Кількість символів</ListBoxItem>
+            <ListBoxItem IsSelected="True">Кількість слів</ListBoxItem>
+            <ListBoxItem IsSelected="True">Кількість питальних речень</ListBoxItem>
+            <ListBoxItem IsSelected="True">Кількість окличних речень</ListBoxItem>
+        </ListBox>
+        <TextBlock x:Name="Report" Grid.Row="3"></TextBlock>
+        <Button x:Name="Save" Content="Зберегти звіт" Grid.Row="4" Height="50" Width="150" ></Button>
+    </Grid>
+</Window>
